@@ -11,7 +11,7 @@ const Contact = () => {
       "service_yiu367f",
       "template_auckzup",
       form.current,
-      "cCZyk5t6tOqfq07_H"
+      "AJjL4Lwg-IyHAIeLr"
     );
     e.target.reset();
   };
