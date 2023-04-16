@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.c6908134.css",
+    "main.js": "/portfolio/static/js/main.dc74fabe.js",
+    "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
+    "static/media/about2.jpeg": "/portfolio/static/media/about2.92b759dd9e031bfd10d2.jpeg",
+    "static/media/Vivek-Resume.pdf": "/portfolio/static/media/Vivek-Resume.a4e1ff9c385bbd975ef5.pdf",
+    "static/media/testimonial3.png": "/portfolio/static/media/testimonial3.2e18bfe27c6d2e2e9fdc.png",
+    "static/media/testimonial2.png": "/portfolio/static/media/testimonial2.39a53f7f092f07f5bceb.png",
+    "static/media/testimonial1.png": "/portfolio/static/media/testimonial1.89079c1d25f2c94ceb89.png",
+    "index.html": "/portfolio/index.html",
+    "main.c6908134.css.map": "/portfolio/static/css/main.c6908134.css.map",
+    "main.dc74fabe.js.map": "/portfolio/static/js/main.dc74fabe.js.map",
+    "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c6908134.css",
+    "static/js/main.dc74fabe.js"
+  ]
+}
