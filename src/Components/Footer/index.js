@@ -25,7 +25,7 @@ const Footer = () => {
         <div className="footer__social">
           <a
             rel="noreferrer"
-            href="mailto:Vivekkushwah714@gmail.com.com"
+            href="mailto:shivamranjan81@gmail.com"
             className="footer__social-link"
             target={"_blank"}
           >
@@ -33,14 +33,14 @@ const Footer = () => {
           </a>
           <a
             rel="noreferrer"
-            href="https://www.linkedin.com/in/vivek-kushwah-997b14211/"
+            href="https://www.linkedin.com/in/shivam-ranjan-b57a28150/"
             className="footer__social-link"
             target={"_blank"}
           >
             <i className="bx bxl-linkedin-square"></i>
           </a>
           <a
-            href="https://github.com/vivekkushwah16"
+            href="https://github.com/Shivam8100"
             rel="noreferrer"
             c
             className="footer__social-link"

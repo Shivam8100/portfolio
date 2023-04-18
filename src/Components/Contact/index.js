@@ -8,8 +8,8 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs.sendForm(
-      "service_yiu367f",
-      "template_auckzup",
+      "service_qcljdhn",
+      "template_calirs5",
       form.current,
       "AJjL4Lwg-IyHAIeLr"
     );
@@ -30,7 +30,7 @@ const Contact = () => {
                 shivamranjan81@gmail.com
               </span>
               <a
-                href="mailto:Vivekkushwah714@gmail.com.com"
+                href="mailto:shivamranjan81@gmail.com.com"
                 className="contact__button"
               >
                 Write me
@@ -42,7 +42,7 @@ const Contact = () => {
               <h3 className="contact__card-title">Whatsapp </h3>
               <span className="contact__card-data">8700795118</span>
               <a
-                href="https://api.whatsapp.com/send?phone=9084739843&text=Hello"
+                href="https://api.whatsapp.com/send?phone=8700795118&text=Hello"
                 className="contact__button "
               >
                 Write me
