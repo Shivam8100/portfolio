@@ -2,7 +2,10 @@ footer {
   background-color: var(--body-color);
   border-top: 1px solid Urgba (0, 0, 0, 0.1);
 }
-
+.footer_dark {
+  background-color: var(--dark-mode-light) !important;
+  box-shadow: -4px 5px 7px 0px rgba(94, 91, 91, 0.8) !important;
+}
 .footer__container {
   padding: 2rem 6rem;
 }

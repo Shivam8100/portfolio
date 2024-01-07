@@ -15,7 +15,15 @@ const Header = () => {
           >
             {" < SHIVAM />"}
           </a>
-          <div className={toggle ? "nav__menu show-menu" : "nav__menu"}>
+          <div
+            className={
+              toggle && darkMode
+                ? "nav__menu show-menu nav_menu_dark"
+                : toggle
+                ? "nav__menu show-menu"
+                : "nav__menu"
+            }
+          >
             <ul className="nav__list ">
               <li className="nav__item">
                 <a

@@ -119,6 +119,8 @@
 }
 
 .toast_message {
+  z-index: 10;
+  font-size: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -158,6 +160,18 @@
 
 /* For medium devices */
 @media screen and (max-width: 768px) {
+  .toast_message {
+    font-size: 14px;
+    width: 250px;
+    height: 50px;
+    border-radius: 6px;
+    bottom: 70px;
+    right: 20px;
+  }
+
+  .toast-cross {
+    font-size: 16px;
+  }
   .contact__container {
     grid-template-columns: 1fr;
     row-gap: 3rem;

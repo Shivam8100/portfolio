@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./footer.css";
+import { ModeContext } from "../../App";
 const Footer = () => {
+  const [darkMode] = useContext(ModeContext);
   return (
-    <footer className="footer">
+    <footer className={darkMode ? "footer_dark" : "footer"}>
       <div className="footer__container container">
         <h1 className="footer__title">Shivam </h1>
         <ul className="footer__list">
@@ -50,7 +52,7 @@ const Footer = () => {
           </a>
         </div>
         <span className="footer__copy">
-          &#169; Shivam Ranjan.  All rigths reserved
+          &#169; Shivam Ranjan. All rigths reserved
         </span>
       </div>
     </footer>
