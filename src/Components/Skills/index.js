@@ -1,7 +1,7 @@
-import React from "react";
-import Backend from "./Backend";
+import React, { useContext } from "react";
+// import Backend from "./Backend";
 import Frontend from "./Frontend";
-import "./skills.css"
+import "./skills.css";
 const Skills = () => {
   return (
     <section className="skills section" id="skills">

@@ -1,17 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Data } from "./data";
 import "./testimonials.css";
-import {  Pagination,} from "swiper";
+import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import { ModeContext } from "../../App";
 const Testimonials = () => {
+  const [darkMode] = useContext(ModeContext);
   return (
     <section className="testimonial container section">
-      <h2 className="section__title">My clients say</h2>
+      <h2 className="section__title">My Projects</h2>
       <span className="section__subtitle">Testimonial</span>
       <Swiper
         className="testimonial__container"
@@ -35,7 +37,12 @@ const Testimonials = () => {
       >
         {Data.map(({ id, image, title, description }) => {
           return (
-            <SwiperSlide className="testimonial__card" key={id}>
+            <SwiperSlide
+              className={
+                darkMode ? "testimonial__card-dark" : "testimonial__card"
+              }
+              key={id}
+            >
               <img src={image} alt={title} className="testimonial__img" />
               <h3 className="testimonial__name">{title}</h3>
               <p className="testimonial__description">{description}</p>

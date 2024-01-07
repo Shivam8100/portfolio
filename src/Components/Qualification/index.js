@@ -66,12 +66,8 @@ const Qualification = () => {
                 <span className="qualification__line"></span>
               </div>
               <div>
-                <h3 className="qualification__title">
-                  GATE Qualified
-                </h3>
-                <span className="qualification_subtitle">
-                  
-                </span>
+                <h3 className="qualification__title">GATE Qualified</h3>
+                <span className="qualification_subtitle"></span>
                 <div className="qualification_calender">
                   <i className="uil uil-calendar-alt"></i> 2020
                 </div>
@@ -112,13 +108,15 @@ const Qualification = () => {
                   Antino Labs private limited
                 </span>
                 <div className="qualification_calender">
-                  <i className="uil uil-calendar-alt"></i> 11/2021 - Present
+                  <i className="uil uil-calendar-alt"></i> 11/2021 -07/2023
                 </div>
               </div>
             </div>{" "}
             <div className="qualification__data">
               <div>
-                <h3 className="qualification__title">Frontend React Developer</h3>
+                <h3 className="qualification__title">
+                  Frontend React Developer
+                </h3>
                 <span className="qualification_subtitle">Freelance</span>
                 <div className="qualification_calender">
                   <i className="uil uil-calendar-alt"></i> 01/2021 - 11/21
@@ -129,7 +127,22 @@ const Qualification = () => {
                 <span className="qualification__line"></span>
               </div>
             </div>
-           
+            <div className="qualification__data">
+              <div></div>
+              <div>
+                <span className="qualification__rounder"></span>
+                <span className="qualification__line"></span>
+              </div>
+              <div>
+                <h3 className="qualification__title">Software developer</h3>
+                <span className="qualification_subtitle">
+                  Health Care company
+                </span>
+                <div className="qualification_calender">
+                  <i className="uil uil-calendar-alt"></i> 07/2023 - Present
+                </div>
+              </div>
+            </div>{" "}
           </div>
         </div>
       </div>

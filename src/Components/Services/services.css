@@ -12,8 +12,13 @@
   width: 270px;
   position: relative;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: var(--container-color);
+  border-radius: 8px;
+  /* background-color: var(--container-color); */
   padding: 6rem 0 2rem 2.5rem;
+}
+
+.services_dark_mode {
+  border: 1px solid var(--text-color) !important;
 }
 
 .services__icon {
@@ -71,6 +76,14 @@
   padding: 4.5rem 2.5rem 2.5rem;
   border-radius: 1.5rem;
 }
+.service_modal_dark {
+  width: 500px;
+  position: relative;
+  background-color: var(--dark-mode);
+  padding: 4.5rem 2.5rem 2.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 8px rgba(172, 127, 127, 0.5);
+}
 .services__modal-close {
   position: absolute;
   top: 1.5rem;
@@ -125,8 +138,7 @@
 
 /* For small devices */
 @media screen and (max-width: 576px) {
-    .services__modal-content {
-  width: 370px;
- 
-}
+  .services__modal-content {
+    width: 370px;
+  }
 }

@@ -7,14 +7,7 @@ export const frontendSkills = [
     name: "CSS/SCSS",
     level: "Advanced",
   },
-  {
-    name: "Tailwind css",
-    level: "Advanced",
-  },
-  {
-    name: "material ui",
-    level: "Advanced",
-  },
+
   {
     name: "JAVASCRIPT",
     level: "Advanced",
@@ -41,6 +34,10 @@ export const frontendSkills = [
   },
   {
     name: "payment gateway",
+    level: "INTERMEDIATE",
+  },
+  {
+    name: "SEO",
     level: "INTERMEDIATE",
   },
 ];

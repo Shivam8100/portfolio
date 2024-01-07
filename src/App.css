@@ -14,6 +14,9 @@
   --text-color: hsl(var(--hue), var(--sat), 46%);
   --body-color: hsl(var(--hue), var(--sat), 98%);
   --container-color: #fff;
+  --dark-mode: #0a0a0a;
+  --dark-mode-light: rgba(19, 3, 3, 0.225);
+  --dark-mode-text-active: rgba(255, 255, 255, 0.8);
 
   /*========== Font and typography ==========*/
   --body-font: "Poppins", sans-serif;
@@ -48,6 +51,13 @@
   --z-tooltip: 10;
   --z-fixed: 100;
   --z-modal: 1000;
+}
+
+.dark-mode {
+  background-color: var(--dark-mode);
+}
+.dark-mode-light {
+  background-color: var(--dark-mode-light);
 }
 
 /* Responsive typography */

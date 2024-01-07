@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { frontendSkills } from "./constant";
+import { ModeContext } from "../../App";
 
 const Frontend = () => {
+  const [darkMode] = useContext(ModeContext);
   return (
-    <div className="skills__content">
+    <div
+      className={
+        darkMode ? "skills__content skill_dark_mode" : "skills__content"
+      }
+    >
       <h3 className="skills__title">Frontend Developer</h3>
       <div className="skills__box">
         <div className="skills__group">

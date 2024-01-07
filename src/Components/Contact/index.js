@@ -1,20 +1,33 @@
-import React, { useRef } from "react";
+import React, { useContext, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import "./contact.css";
+import { ModeContext } from "../../App";
 
 const Contact = () => {
+  const [darkMode] = useContext(ModeContext);
+  const [success, setSucces] = useState(false);
   const form = useRef();
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
 
-    emailjs.sendForm(
-      "service_qcljdhn",
-      "template_calirs5",
-      form.current,
-      "AJjL4Lwg-IyHAIeLr"
-    );
-    e.target.reset();
+    try {
+      const response = await emailjs.sendForm(
+        "service_qcljdhn",
+        "template_calirs5",
+        form.current,
+        "AJjL4Lwg-IyHAIeLr"
+      );
+
+      if (response.status === 200) {
+        e.target.reset();
+        setSucces(true);
+      } else {
+      }
+    } catch (error) {
+      alert("something went wrong !");
+    }
   };
+
   return (
     <section className="contact section container" id="contact">
       <h2 className="section__title">Get in touch</h2>
@@ -23,7 +36,7 @@ const Contact = () => {
         <div className=" contact__content">
           <h3 className="contact__title">Talk to me</h3>
           <div className="contact__info">
-            <div className="contact__card">
+            <div className={darkMode ? "contact__card_dark" : "contact__card"}>
               <i className="bx bx-mail-send contact__card-icon"></i>
               <h3 className="contact__card-title">Email </h3>
               <span className="contact__card-data">
@@ -37,7 +50,7 @@ const Contact = () => {
                 <i className="bx bx-right-arrow-alt contact__button-icon"></i>
               </a>
             </div>{" "}
-            <div className="contact__card">
+            <div className={darkMode ? "contact__card_dark" : "contact__card"}>
               <i className="bx bxl-whatsapp contact__card-icon"></i>
               <h3 className="contact__card-title">Whatsapp </h3>
               <span className="contact__card-data">8700795118</span>
@@ -49,7 +62,7 @@ const Contact = () => {
                 <i className="bx bx-right-arrow-alt contact__button-icon"></i>
               </a>
             </div>
-            <div className="contact__card">
+            <div className={darkMode ? "contact__card_dark" : "contact__card"}>
               <i className="bx bxl-linkedin contact__card-icon"></i>
               <h3 className="contact__card-title">LinkedIn</h3>
               <a
@@ -58,7 +71,7 @@ const Contact = () => {
                 target={"_blank"}
                 className="contact__card-data"
               >
-               https://www.linkedin.com/in/shivam-ranjan-b57a28150/
+                https://www.linkedin.com/in/shivam-ranjan-b57a28150/
               </a>
               <a
                 href="https://www.linkedin.com/in/shivam-ranjan-b57a28150/"
@@ -74,36 +87,60 @@ const Contact = () => {
           <h3 className="contact__title">Write me your project</h3>
           <form ref={form} className="contact__form" onSubmit={sendEmail}>
             <div className="contact__form-div">
-              <label htmlFor="" className="contact__form-tag">
+              <label
+                htmlFor=""
+                className={
+                  darkMode ? "contact-form_tag-dark" : "contact__form-tag"
+                }
+              >
                 Name
               </label>
               <input
                 type="text"
                 name="name"
-                className="contact__form-input"
+                className={
+                  darkMode ? "contact__form-input-dark" : "contact__form-input"
+                }
                 placeholder="Insert your name"
+                required
               />
             </div>{" "}
             <div className="contact__form-div">
-              <label htmlFor="" className="contact__form-tag">
+              <label
+                htmlFor=""
+                className={
+                  darkMode ? "contact-form_tag-dark" : "contact__form-tag"
+                }
+              >
                 Email
               </label>
               <input
                 type="email"
                 name="email"
-                className="contact__form-input"
+                className={
+                  darkMode ? "contact__form-input-dark" : "contact__form-input"
+                }
                 placeholder="Insert your email"
+                required
               />
             </div>
             <div className="contact__form-div contact__form-area ">
-              <label htmlFor="" className="contact__form-tag">
+              <label
+                htmlFor=""
+                className={
+                  darkMode ? "contact-form_tag-dark" : "contact__form-tag"
+                }
+              >
                 Project
               </label>
               <textarea
                 cols="30"
                 rows="10"
                 name="project"
-                className="contact__form-input"
+                required
+                className={
+                  darkMode ? "contact__form-input-dark" : "contact__form-input"
+                }
                 placeholder="Write about your project"
               />
             </div>
@@ -130,6 +167,16 @@ const Contact = () => {
           </form>
         </div>
       </div>
+      {success && (
+        <div className="toast_message">
+          <div className="toast-content">
+            <p>Message sent successfully</p>
+            <p className="toast-cross" onClick={() => setSucces(false)}>
+              x
+            </p>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
