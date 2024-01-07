@@ -123,6 +123,12 @@
   .nav__toggle {
     display: block;
   }
+  .nav-link-dark {
+    color: var(--title-color) !important;
+  }
+  .nav-link-dark-active {
+    color: var(--title-color) !important;
+  }
 }
 
 /* For small devices */
@@ -135,6 +141,12 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     column-gap: 0;
+  }
+  .nav-link-dark {
+    color: var(--title-color) !important;
+  }
+  .nav-link-dark-active {
+    color: var(--title-color) !important;
   }
 }
 @media screen and (max-width: 768px) {
