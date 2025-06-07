@@ -2,6 +2,13 @@ import webLogo from "../../assets/website-logo.jpg";
 
 export const Data = [
   {
+    id: 5,
+    image: webLogo,
+    title: "Truemeds website and portals",
+    description:
+      "- Led frontend development for e-commerce, admin, and warehouse dashboards, Optimized performance and SEO of Next.js website to improve Web Vitals.",
+  },
+  {
     id: 1,
     image: webLogo,
     title: "Eggoz E-commerce website and portal",

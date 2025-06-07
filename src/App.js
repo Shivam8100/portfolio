@@ -13,7 +13,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 export const ModeContext = createContext();
 function App() {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
   return (
     <>
       <ModeContext.Provider value={[darkMode, setDarkMode]}>

@@ -2,17 +2,19 @@ import React, { useContext, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import "./contact.css";
 import { ModeContext } from "../../App";
+import { contactinfo } from "../../constants";
 
 const Contact = () => {
   const [darkMode] = useContext(ModeContext);
   const [success, setSucces] = useState(false);
+  const [error, setError] = useState(null);
   const form = useRef();
   const sendEmail = async (e) => {
     e.preventDefault();
 
     try {
       const response = await emailjs.sendForm(
-        "service_qcljdhn",
+        "service_ptt45dw",
         "template_calirs5",
         form.current,
         "AJjL4Lwg-IyHAIeLr"
@@ -24,7 +26,13 @@ const Contact = () => {
       } else {
       }
     } catch (error) {
-      alert("something went wrong !");
+      setError(error);
+      console.error(error);
+    } finally {
+      setTimeout(() => {
+        setSucces(null);
+        setError(null)
+      },2000);
     }
   };
 
@@ -67,11 +75,11 @@ const Contact = () => {
               <h3 className="contact__card-title">LinkedIn</h3>
               <a
                 rel="noreferrer"
-                href="https://www.linkedin.com/in/shivam-ranjan-b57a28150/"
+                href={contactinfo.linkedin}
                 target={"_blank"}
                 className="contact__card-data"
               >
-                https://www.linkedin.com/in/shivam-ranjan-b57a28150/
+                Linkedin Profile
               </a>
               <a
                 href="https://www.linkedin.com/in/shivam-ranjan-b57a28150/"
@@ -167,7 +175,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
-      {success && (
+      {success ? (
         <div className="toast_message">
           <div className="toast-content">
             <p>Message sent successfully</p>
@@ -176,7 +184,16 @@ const Contact = () => {
             </p>
           </div>
         </div>
-      )}
+      ) : error ? (
+        <div className="toast_message warning">
+          <div className="toast-content">
+            <p>Something went wrong!</p>
+            <p className="toast-cross" onClick={() => setError(null)}>
+              x
+            </p>
+          </div>
+        </div>
+      ) : null}
     </section>
   );
 };

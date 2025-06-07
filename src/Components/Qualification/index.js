@@ -81,21 +81,7 @@ const Qualification = () => {
                 : "qualification__content"
             }
           >
-            <div className="qualification__data">
-              <div>
-                <h3 className="qualification__title">Javascript Intern</h3>
-                <span className="qualification_subtitle">
-                  Milestone OS noida
-                </span>
-                <div className="qualification_calender">
-                  <i className="uil uil-calendar-alt"></i> 01/2021 - 06/2021,
-                </div>
-              </div>
-              <div>
-                <span className="qualification__rounder"></span>
-                <span className="qualification__line"></span>
-              </div>
-            </div>
+          
             <div className="qualification__data">
               <div></div>
               <div>
@@ -108,7 +94,7 @@ const Qualification = () => {
                   Antino Labs private limited
                 </span>
                 <div className="qualification_calender">
-                  <i className="uil uil-calendar-alt"></i> 11/2021 -07/2023
+                  <i className="uil uil-calendar-alt"></i> Nov-2021 - July 2023
                 </div>
               </div>
             </div>{" "}
@@ -119,7 +105,7 @@ const Qualification = () => {
                 </h3>
                 <span className="qualification_subtitle">Freelance</span>
                 <div className="qualification_calender">
-                  <i className="uil uil-calendar-alt"></i> 01/2021 - 11/21
+                  <i className="uil uil-calendar-alt"></i> jan 2021 - Nov 21
                 </div>
               </div>
               <div>
@@ -136,10 +122,10 @@ const Qualification = () => {
               <div>
                 <h3 className="qualification__title">Software developer</h3>
                 <span className="qualification_subtitle">
-                  Health Care company
+                  Truemeds India
                 </span>
                 <div className="qualification_calender">
-                  <i className="uil uil-calendar-alt"></i> 07/2023 - Present
+                  <i className="uil uil-calendar-alt"></i> July 2023 - Present
                 </div>
               </div>
             </div>{" "}

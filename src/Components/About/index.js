@@ -1,8 +1,9 @@
 import React from "react";
 import "./about.css";
 import AboutImage from "../../assets/about2.jpeg";
-import CV from "../../assets/shivam_resume.pdf";
+import CV from "../../assets/shivam_resume_fe.pdf";
 import Info from "./info";
+import { about } from "../../constants";
 const About = () => {
   return (
     <section className="about section" id="about">
@@ -13,14 +14,9 @@ const About = () => {
         <div className="about__data">
           <Info />
           <p className="about__description">
-            I'm a Frontend Developer whose whole interest is building
-            interactive, accessible, and responsive websites. My project section
-            contains some beautiful websites I've built.
+          {about.desc}
             <br/>
-             I'm currently open to Freelancer
-            Job opportunities where I can contribute to your business and make
-            your users happy. Contact me if you're interested in having a taste
-            of my skills.
+           {about.desc2}
           </p>
           <a download href={CV} className="button button--flex">
             Download CV{" "}
